@@ -1,0 +1,10 @@
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServer
+metadata:
+  name: apps
+  namespace: default
+spec:
+  host: apps-test.ucsd.edu
+  routes:
+  - path: /
+    route: default/default
